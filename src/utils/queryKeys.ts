@@ -1,0 +1,1 @@
+export const CONFIG_QUERY_KEY = ['config'];

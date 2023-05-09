@@ -1,0 +1,19 @@
+.astro-feed {
+
+	> :nth-child(2) {
+		margin: 16px 0;
+	}
+
+	&-tabs {
+		display: flex;
+		column-gap: 10px;
+
+		&__btn {
+			&-selected {
+				background-color: rgb(255,85,0);
+				border-color: rgb(255,85,0);
+				color: #fff;
+			}
+		}
+	}
+}
