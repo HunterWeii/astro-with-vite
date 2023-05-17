@@ -15,7 +15,9 @@ function generateSkeleton(count = 0) {
 }
 
 export default function MyFeed() {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 0.8
+  });
 
   const {
     data,
@@ -33,14 +35,15 @@ export default function MyFeed() {
       if ((lastPage as []).length === 0) {
         return undefined;
       }
-      return (lastPage as []).length + 1;
-    }
+      return (pages as []).length + 1;
+    },
+    staleTime: 0
   });
 
   useEffect(() => {
     if (isError) return;
     if (inView && !isFetching) {
-      console.log('fetching next pages...')
+      console.log('fetching next pages...');
       fetchNextPage();
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -56,7 +59,7 @@ export default function MyFeed() {
     <div>
       <div>
         {
-          isLoading ? generateSkeleton(5) : pages.map(page => {
+          isLoading ? generateSkeleton(15) : pages.map(page => {
             return (
               <FeedItem 
                 key={page.id}
@@ -69,10 +72,8 @@ export default function MyFeed() {
           })
         }
       </div>
-      {/* <div>
-        { isFetchingNextPage ? generateSkeleton(1) : null }
-      </div> */}
-      <div style={{ height: '10px' }} ref={ref}></div>
+      { isFetchingNextPage ? generateSkeleton(15) : null }
+      <div ref={ref}></div>
     </div>
   )
 }
