@@ -16,7 +16,7 @@ function generateSkeleton(count = 0) {
 
 export default function MyFeed() {
   const { ref, inView } = useInView({
-    threshold: 0.5
+    threshold: 0.95,
   });
 
   const {
