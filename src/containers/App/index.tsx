@@ -12,6 +12,7 @@ import BackgroundUpdate from '@src/components/BackgroundUpdate';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import FootballFeed from '@src/containers/FootballFeed';
 import MyFeed from '@containers/MyFeed';
+import MySelector from '@containers/Selector';
 
 export default function App() {
   const {
@@ -38,6 +39,7 @@ export default function App() {
             <Route path='/' Component={FootballFeed}></Route>
             <Route path="/football" Component={FootballFeed}></Route>
             <Route path="/my-feed" Component={MyFeed}></Route>
+            <Route path="/my-selector" Component={MySelector}></Route>
           </Routes>
         </BrowserRouter>
       </Content>
