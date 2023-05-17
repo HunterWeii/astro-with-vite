@@ -18,7 +18,7 @@ function generateMyFeedItem() {
 }
 
 export default async function getMyFeed({ pageParam }: QueryFunctionContext) {
-  const myFeeds = pageParam === 10 ? [] : generateMyFeedItem();
+  const myFeeds = pageParam === 15 ? [] : generateMyFeedItem();
 
   return wait(5000, myFeeds);
 }
