@@ -1,0 +1,139 @@
+/*
+ * DM on storycard rails
+*/
+#ddm-story.dm-story {
+  /*
+   *  @ change dm-story height 
+  */
+  --dm-item-height: 300px;
+
+  .dm-story-content-wrapper {
+    /*
+     *  @ change slide arrow
+    */
+    .splide__arrows {
+
+      .splide__arrow {
+        background-color: #fff;
+      }
+
+      .splide__arrow--prev {
+        left: 2em;
+      }
+
+      .splide__arrow--next {
+        right: 2em;
+      }
+    }
+
+    .dm-story-ulwrapper {
+      .dm-story-ul-list {
+        .dm-story-card-component {
+          /*
+           *  @ play icon
+          */
+          .dm-story-card-play {
+            top: 30px;
+          }
+
+          /*
+           * @ story card title 
+          */
+          .dm-story-card-title {
+            font-size: 16px;
+            font-weight: bold;
+          }
+
+          /*
+           *  @ story card created date
+          */
+          .dm-story-card-created {
+            font-size: 10px;
+            font-weight: bold;
+            color: yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+ * DM on fullscreen
+*/
+#ddm-story.dm-story {
+  &.dm-fullscreen {
+    .dm-story-content-wrapper {
+      .splide__arrows {
+
+        .splide__arrow {
+          background-color: #fff;
+        }
+  
+        .splide__arrow--prev {
+          
+        }
+  
+        .splide__arrow--next {
+          
+        }
+      }
+    }
+  }
+
+  .dm-player-component {
+    .dm-player-layout {
+      /*
+       *  @ play icon
+      */
+      .dm-player-overlay > svg {}
+
+      /*
+       * @ title, date, avatar etc
+      */
+      .dm-player-info-wrapper {
+        .dm-player-info-header {
+          /*
+           *  @ avatar 
+          */
+          .dm-player-info-owner_ava {
+            width: 50px;
+            height: 50px;
+          }
+
+          .dm-player-info-right {
+            .dm-player-info-owner_name {
+              color: blue;
+            }
+
+            .dm-player-info-created {
+              color: yellow;
+            }
+          }
+        }
+
+        .dm-player-info-details {
+          font-size: 16px;
+          color: green;
+        }
+      }
+
+      /*
+       *  @ dm player control button
+      */
+      .dm-player-control-wrapper {
+        .dm-player-share-button {
+          > svg {
+
+          }
+        }
+
+        .dm-player-mute-button {
+          > svg {
+
+          }
+        }
+      }
+    }
+  }
+}

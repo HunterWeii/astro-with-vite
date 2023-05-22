@@ -13,6 +13,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import FootballFeed from '@src/containers/FootballFeed';
 import MyFeed from '@containers/MyFeed';
 import MySelector from '@containers/Selector';
+import DMVideoReels from '@containers/DMVideoReels';
 
 export default function App() {
   const {
@@ -40,6 +41,7 @@ export default function App() {
             <Route path="/football" Component={FootballFeed}></Route>
             <Route path="/my-feed" Component={MyFeed}></Route>
             <Route path="/my-selector" Component={MySelector}></Route>
+            <Route path="/dm-video-reels" Component={DMVideoReels}></Route>
           </Routes>
         </BrowserRouter>
       </Content>
